@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         test1();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             test2("gong", "wen", i);
         }
     }

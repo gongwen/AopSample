@@ -112,6 +112,10 @@ public class DebugLogAspect {
             builder.append(Strings.toString(result));
         }
 
+        if (Looper.myLooper() != Looper.getMainLooper()) {
+            builder.append(" [Thread:\"").append(Thread.currentThread().getName()).append("\"]");
+        }
+
         Class<?> cls = signature.getDeclaringType();
         Log.v(asTag(cls), builder.toString());
     }
