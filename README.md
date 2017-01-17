@@ -61,3 +61,9 @@ variants.all { variant ->
 }
 ```
 * 创建一个AndroidLibrary，例如aoplibrary，实现aop
+
+#### 参考：
+* <a href="http://www.jianshu.com/p/0fa8073fd144">Android中的AOP编程</a>
+* <a href="http://www.codexiu.cn/android/blog/19867/">Android 基于AOP监控之——AspectJ使用指南</a>
+* https://github.com/JakeWharton/hugo
+
