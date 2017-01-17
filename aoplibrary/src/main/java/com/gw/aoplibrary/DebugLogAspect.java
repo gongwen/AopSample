@@ -36,7 +36,7 @@ public class DebugLogAspect {
     public void constructor() {
     }
 
-    public static void setEnabled(boolean enabled) {
+    protected static void setEnabled(boolean enabled) {
         DebugLogAspect.enabled = enabled;
     }
 

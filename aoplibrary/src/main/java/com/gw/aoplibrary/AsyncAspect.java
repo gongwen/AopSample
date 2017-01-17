@@ -12,8 +12,6 @@ import org.aspectj.lang.annotation.Pointcut;
  */
 @Aspect
 public class AsyncAspect {
-    private static volatile boolean enabled = true;
-
     private static final String POINTCUT_METHOD =
             "execution(@com.gw.aoplibrary.annotation.AsyncMethod * *(..))";
 
@@ -21,12 +19,8 @@ public class AsyncAspect {
     public void method() {
     }
 
-    public static void setEnabled(boolean enabled) {
-        AsyncAspect.enabled = enabled;
-    }
-
     @Around("method()")
-    public Object logAndExecute(final ProceedingJoinPoint joinPoint) {
+    public Object asyncExecute(final ProceedingJoinPoint joinPoint) {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
                                        @Override
                                        public void execute() {
