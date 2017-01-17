@@ -1,1 +1,1 @@
-include ':app', ':aoplibrary', ':threadlibrary'
+include ':app', ':aspectjlibrary', ':threadlibrary'
