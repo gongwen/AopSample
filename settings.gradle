@@ -1,1 +1,1 @@
-include ':app', ':aspectjlibrary', ':threadlibrary'
+include ':app', ':aspectjlibrary', ':threadlibrary', ':viewfinder-annotation', ':viewfinder-compiler', ':viewfinder'

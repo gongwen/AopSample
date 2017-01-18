@@ -2,18 +2,27 @@ package com.gw.aopsample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.gw.aoplibrary.annotation.AsyncMethod;
 import com.gw.aoplibrary.annotation.DebugLog;
+import com.gw.viewfinder.ViewFinder;
+import com.gw.viewfinder.annotation.BindView;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.tv)
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ViewFinder.inject(this);
+        tv.setText("apt demo");
+
         test1();
         for (int i = 0; i < 20; i++) {
             test2("gong", "wen", i);

@@ -3,6 +3,8 @@ import org.aspectj.bridge.MessageHandler
 import org.aspectj.tools.ajc.Main
 
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -37,6 +39,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     testCompile 'junit:junit:4.12'
     compile project(':aspectjlibrary')
+
+    compile project(':viewfinder-annotation')
+    compile project(':viewfinder')
+    apt project(':viewfinder-compiler')
 }
 
 //aspectj
