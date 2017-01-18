@@ -69,6 +69,7 @@ Apt使用练习
 * viewfinder-compiler－>model->AnnotatedClass 提供方法，通过参数TypeElement和Elements生成class文件
 * viewfinder-compiler－>ViewFinderProcessor 遍历获取注解信息，并生成class文件
 * ViewFinder 通过生成的class文件实现所需功能
+
 #### 参考：
 
 ##### aspectj
