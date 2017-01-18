@@ -19,10 +19,11 @@ public class OnClickMethod {
     public OnClickMethod(Element element) throws IllegalArgumentException {
         if (element.getKind() != ElementKind.METHOD) {
             throw new IllegalArgumentException(
-                String.format("Only methods can be annotated with @%s", OnClick.class.getSimpleName()));
+                    String.format("Only methods can be annotated with @%s", OnClick.class.getSimpleName()));
         }
         this.methodElement = (ExecutableElement) element;
-        this.ids = methodElement.getAnnotation(OnClick.class).value();
+        OnClick onClick = methodElement.getAnnotation(OnClick.class);
+        this.ids = onClick.value();
 
         if (ids == null) {
             throw new IllegalArgumentException(String.format("Must set valid ids for @%s", OnClick.class.getSimpleName()));
@@ -39,7 +40,7 @@ public class OnClickMethod {
         List<? extends VariableElement> parameters = methodElement.getParameters();
         if (parameters.size() > 0) {
             throw new IllegalArgumentException(
-                String.format("The method annotated with @%s must have no parameters", OnClick.class.getSimpleName()));
+                    String.format("The method annotated with @%s must have no parameters", OnClick.class.getSimpleName()));
         }
     }
 

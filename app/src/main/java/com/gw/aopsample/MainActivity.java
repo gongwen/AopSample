@@ -2,18 +2,22 @@ package com.gw.aopsample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gw.aoplibrary.annotation.AsyncMethod;
 import com.gw.aoplibrary.annotation.DebugLog;
 import com.gw.viewfinder.ViewFinder;
 import com.gw.viewfinder.annotation.BindView;
+import com.gw.viewfinder.annotation.OnClick;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tv)
     TextView tv;
+    @BindView(R.id.activity_main)
+    RelativeLayout rl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +47,9 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return firstName + " " + secondName;
+    }
+
+    @OnClick({R.id.activity_main, R.id.tv})
+    public void click() {
     }
 }
