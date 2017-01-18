@@ -1,8 +1,6 @@
 package com.gw.viewFinder.compiler.model;
 
 import com.gw.viewFinder.compiler.TypeUtil;
-import com.gw.viewFinder.compiler.model.BindViewField;
-import com.gw.viewFinder.compiler.model.OnClickMethod;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
