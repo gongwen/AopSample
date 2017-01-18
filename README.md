@@ -64,11 +64,11 @@ variants.all { variant ->
 
 Apt使用练习
 =============
-viewfinder-annotation 负责声明注解
-viewfinder-compiler－>model->(BindViewField,OnClickMethod) 负责解析注解及其相关数据
-viewfinder-compiler－>model->AnnotatedClass 通过提供的TypeElement和Elements生成class文件
-viewfinder-compiler－>ViewFinderProcessor 遍历获取注解信息
-ViewFinder 通过生成的class文件实现所需功能
+* viewfinder-annotation 负责定义注解
+* viewfinder-compiler－>model->(BindViewField,OnClickMethod) 负责解析注解及其相关数据
+* viewfinder-compiler－>model->AnnotatedClass 提供方法，通过参数TypeElement和Elements生成class文件
+* viewfinder-compiler－>ViewFinderProcessor 遍历获取注解信息，并生成class文件
+* ViewFinder 通过生成的class文件实现所需功能
 #### 参考：
 
 ##### aspectj
